@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Darshita Gupta | Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav">
+      <a class="logo" href="#home">Darshita<span>.</span></a>
+
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </div>
+
+      <button id="theme-toggle" class="theme-button"
+        type="button" aria-label="Switch colour theme">☾</button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <p class="eyebrow">STUDENT · TECH ENTHUSIAST</p>
+      <h1>Hi, I’m <span>Darshita Gupta.</span></h1>
+      <p class="hero-text">
+        I’m currently studying CSEDS at SOIT, RGPV, Bhopal.
+        I’m learning programming and enjoy building small projects
+        as I grow my skills.
+      </p>
+      <a class="button" href="#projects">See my practice projects ↓</a>
+    </section>
+
+    <section class="section" id="about">
+      <p class="eyebrow">ABOUT ME</p>
+      <h2>Learning by making.</h2>
+      <p class="section-text">
+        I’m a student interested in technology and programming.
+        These projects are practice projects I made while learning
+        Python and C.
+      </p>
+    </section>
+
+    <section class="section" id="skills">
+      <p class="eyebrow">WHAT I’M LEARNING</p>
+      <h2>My skills</h2>
+      <div class="skill-list">
+        <span>Python</span>
+        <span>C programming</span>
+        <span>Problem solving</span>
+        <span>HTML &amp; CSS</span>
+      </div>
+    </section>
+
+    <section class="section" id="projects">
+      <p class="eyebrow">MY PRACTICE WORK</p>
+      <h2>Projects</h2>
+
+      <div class="project-grid">
+
+        <article class="project-card">
+          <img class="project-image"
+            src="python-calculator.png"
+            alt="Screenshot of my Python calculator">
+
+          <span class="project-type">PYTHON · PRACTICE PROJECT</span>
+          <h3>Python Calculator</h3>
+          <p>
+            A basic calculator that performs addition, subtraction,
+            multiplication, and division. I made it to practise Python
+            input and conditions.
+          </p>
+
+          <details class="code-details">
+            <summary>See Python code</summary>
+            <pre><code>print("This is my first calculator")
+
+input1 = int(input("Enter first number: "))
+input2 = int(input("Enter second number: "))
+
+op = input("Enter operator (+, -, *, /): ")
+
+if op == "+":
+    print(input1 + input2)
+elif op == "-":
+    print(input1 - input2)
+elif op == "*":
+    print(input1 * input2)
+elif op == "/":
+    print(input1 / input2)
+else:
+    print("Invalid operator")</code></pre>
+          </details>
+        </article>
+
+        <article class="project-card">
+          <img class="project-image"
+            src="c-calculator.png"
+            alt="Screenshot of my C calculator">
+
+          <span class="project-type">C · PRACTICE PROJECT</span>
+          <h3>C Calculator</h3>
+          <p>
+            A simple calculator made in C. This project helped me practise
+            taking input, using operators, and displaying results.
+          </p>
+
+          <details class="code-details">
+            <summary>See C code</summary>
+            <pre><code>#include &lt;stdio.h&gt;
+
+int main() {
+    int num1, num2;
+    char op;
+
+    printf("Enter the first number: ");
+    scanf("%d", &amp;num1);
+
+    printf("Enter the second number: ");
+    scanf("%d", &amp;num2);
+
+    printf("Enter the operator (+, -, *, /, %%): ");
+    scanf(" %c", &amp;op);
+
+    if (op == '+') {
+        printf("Result: %d", num1 + num2);
+    } else if (op == '-') {
+        printf("Result: %d", num1 - num2);
+    } else if (op == '*') {
+        printf("Result: %d", num1 * num2);
+    } else if (op == '%') {
+        if (num2 != 0) {
+            printf("Result: %d", num1 % num2);
+        } else {
+            printf("Cannot divide by zero.");
+        }
+    } else if (op == '/') {
+        if (num2 != 0) {
+            printf("Result: %d", num1 / num2);
+        } else {
+            printf("Cannot divide by zero.");
+        }
+    } else {
+        printf("Invalid operator");
+    }
+
+    return 0;
+}</code></pre>
+          </details>
+        </article>
+
+        <article class="project-card">
+          <img class="project-image"
+            src="number-guessing-game.png"
+            alt="Screenshot of my number guessing game">
+
+          <span class="project-type">PYTHON · PRACTICE PROJECT</span>
+          <h3>Number Guessing Game</h3>
+          <p>
+            A simple game that chooses a random number from 1 to 100.
+            The player keeps guessing until they find the correct number.
+          </p>
+
+          <details class="code-details">
+            <summary>See Python code</summary>
+            <pre><code>import random
+
+number = random.randint(1, 100)
+guess = 0
+
+while guess != number:
+    guess = int(input("Guess a number from 1 to 100: "))
+
+    if guess &lt; number:
+        print("Too low")
+    elif guess &gt; number:
+        print("Too high")
+
+print("Correct!")</code></pre>
+          </details>
+        </article>
+
+      </div>
+    </section>
+
+    <section class="section contact" id="contact">
+      <p class="eyebrow">FIND ME ONLINE</p>
+      <h2>Let’s connect.</h2>
+      <p class="section-text">
+        Visit my profiles to see more about me and my work.
+      </p>
+
+      <a class="button"
+        href="https://www.linkedin.com/in/darshita-gupta-03b332370/"
+        target="_blank"
+        rel="noopener noreferrer">
+        Visit my LinkedIn ↗
+      </a>
+
+      <a class="button"
+        href="https://github.com/darshitag07-coder"
+        target="_blank"
+        rel="noopener noreferrer">
+        Visit my GitHub ↗
+      </a>
+    </section>
+  </main>
+
+  <footer>
+    <p>Made by Darshita Gupta · 2026</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
